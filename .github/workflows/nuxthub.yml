@@ -37,4 +37,4 @@ jobs:
         uses: nuxt-hub/action@v1
         id: deploy
         with:
-          project-key: inventario-de-h-1hrm
+          project-key: inventario-de-h-83ep
