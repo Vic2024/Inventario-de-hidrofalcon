@@ -1,0 +1,1 @@
+export const useEquipment = () => useState<{ equipment: string, id: string }[] | undefined>('equipment', () => [])

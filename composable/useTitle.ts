@@ -1,0 +1,1 @@
+export const useSubTitle = () => useState<string | null>('subTitle', () => null)
