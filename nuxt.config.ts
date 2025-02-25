@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const { DB_URL_DEV, DB_URL_PROD, NODE_ENV, SECRET_JWT_KEY, SECRET_JWT_REFRESH, PORT, HOST } = process.env
+const { NODE_ENV, NUXT_DB_URL_DEV, NUXT_DB_URL_PROD, NUXT_SECRET_JWT_KEY, NUXT_SECRET_JWT_REFRESH, } = process.env
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
@@ -25,12 +25,12 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    mongodbUri: NODE_ENV === 'development' ? DB_URL_DEV : DB_URL_PROD,
-    cookieNameAccess: 'access-tokens',
-    cookieSecret: SECRET_JWT_KEY,
-    cookieSecretRefresh: SECRET_JWT_REFRESH,
-    port: PORT,
-    host: HOST
+    public: {
+      mongodbUri: NODE_ENV === 'development' ? NUXT_DB_URL_DEV : NUXT_DB_URL_PROD,
+      cookieNameAccess: 'access-tokens',
+      cookieSecret: NUXT_SECRET_JWT_KEY,
+      cookieSecretRefresh: NUXT_SECRET_JWT_REFRESH,
+    }
   },
 
   routeRules: {
