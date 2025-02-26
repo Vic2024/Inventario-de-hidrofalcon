@@ -12,9 +12,6 @@ export default defineNuxtConfig({
     }
   },
 
-  hub: {
-  },
-
   nitro: {
     plugins: ['~/server/plugins/mongodb.ts', '~/server/plugins/socket.io.ts'],
     experimental: {
@@ -35,5 +32,5 @@ export default defineNuxtConfig({
     '/dashboard/**': { ssr: false }
   },
 
-  modules: ['@nuxt/image', '@vueuse/nuxt', '@nuxthub/core']
+  modules: ['@nuxt/image', '@vueuse/nuxt']
 })
