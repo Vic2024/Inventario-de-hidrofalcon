@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const { NODE_ENV, DB_URL_DEV, DB_URL_PROD, SECRET_JWT_KEY, SECRET_JWT_REFRESH, } = process.env
 export default defineNuxtConfig({
+  app:{
+    head:{
+      link:[{ rel: 'icon', type: 'image/png', href: '/img/Logo Hidrofalcon.png' }]
+    }
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
   css: ['~/assets/css/index.css'],
