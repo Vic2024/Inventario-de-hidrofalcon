@@ -17,7 +17,6 @@ interface Props {
     helpMessage?: string
 }
 const { labelName, id, required, type, idHelpMessage, helpMessage } = defineProps<Props>()
-    ?? ''
 </script>
 <template>
     <div class="p-4 mx-4 flex flex-col gap-1 w-full">
