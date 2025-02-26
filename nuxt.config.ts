@@ -12,11 +12,6 @@ export default defineNuxtConfig({
     }
   },
 
-  hub: {
-    database: true,
-    remote: true
-  },
-
   nitro: {
     plugins: ['~/server/plugins/mongodb.ts', '~/server/plugins/socket.io.ts'],
     experimental: {
