@@ -20,12 +20,10 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    public: {
-      mongodbUri: NODE_ENV === 'development' ? DB_URL_DEV : DB_URL_PROD,
-      cookieNameAccess: 'access-tokens',
-      cookieSecret: SECRET_JWT_KEY,
-      cookieSecretRefresh: SECRET_JWT_REFRESH,
-    }
+    mongodbUri: NODE_ENV === 'development' ? DB_URL_DEV : DB_URL_PROD,
+    cookieNameAccess: 'access-tokens',
+    cookieSecret: SECRET_JWT_KEY,
+    cookieSecretRefresh: SECRET_JWT_REFRESH,
   },
 
   routeRules: {
