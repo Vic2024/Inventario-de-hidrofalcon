@@ -1,5 +1,5 @@
 import jsPDF from "jspdf";
-/* import autoTable from "jspdf-autotable"; */
+import autoTable from "jspdf-autotable";
 import logo from '~/public/img/Logo Hidrofalcon.png'
 import type { getData } from "~/types";
 import { optionsToTable } from "~/composable/transformToTable";
@@ -26,12 +26,12 @@ export default function convertToPdf(url: string, result: getData, titles: strin
         columnStyles[index] = { lineColor: '#CCCCCC', lineWidth: 0.1, fillColor: '#FFFFFF' }
     })
 
-   /*  autoTable(doc, {
+    autoTable(doc, {
         startY: 60,
         headStyles: { fillColor: '#042B82', lineWidth: 0, lineColor: '#042B82' },
         head: [titlesToPdf],
         body: toTable,
         columnStyles: { ...columnStyles }
-    }) */
+    })
     doc.save(`tabla_de_${titlePage}${subTitle.length > 0 ? `_${subTitle}` : ''}.pdf`)
 }
