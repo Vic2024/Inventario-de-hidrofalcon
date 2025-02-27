@@ -19,6 +19,6 @@ export const validEquipment = (input: object) => {
 export const validParcialEquipment = (input: object) => {
     return schema
         .partial()
-        .omit({ creadoPor: true, modificadoPor: true, creacion: true, modificacion: true })
+        .pick({ creadoPor: true, modificadoPor: true, creacion: true, modificacion: true })
         .safeParse(input)
 }

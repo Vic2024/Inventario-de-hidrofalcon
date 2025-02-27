@@ -78,6 +78,7 @@ const usePage = async (url: string, initValues: initValues, initErrors: initErro
 
     function handleFilter(valueToFilter: Ref<string > | string) {
         const value = valueToFilter.toString()
+        console.log(search.value)
         const isFirstPage = data.currentPage <= 1 ? {} : { page: data.currentPage }
         const isValueToFilter = value.length > 0 && search.value.length > 0
             ? { [value]: search.value }
